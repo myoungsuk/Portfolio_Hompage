@@ -1,0 +1,855 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,700&display=swap");
+@font-face {
+    font-family: "LeferiPoint-WhiteObliqueA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    word-wrap: break-word;
+    word-break: keep-all;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "LeferiPoint-WhiteObliqueA";
+}
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-thumb {
+    height: auto;
+    background: #8c8c8c;
+    border-radius: 1rem;
+}
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+
+#about {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+nav {
+    transition: all 1s;
+    background: rgba(0, 0, 0, 0.88);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .cancel_btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+}
+nav .menu_list {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav .menu_list a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: "Cormorant", serif;
+    font-size: 10rem;
+    font-weight: 600;
+    line-height: 15rem;
+}
+nav .menu_list .redLine {
+    background-color: red;
+    position: absolute;
+    height: 3rem;
+    width: 120%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    -webkit-animation-name: makeRedLine;
+    animation-name: makeRedLine;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav .menu_contact {
+    font-family: "Cormorant", serif;
+    color: white;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+}
+nav .menu_contact-profile {
+    font-size: 3rem;
+    line-height: 6.5rem;
+}
+nav .menu_contact span {
+    margin-top: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+nav .menu_contact .menu_icon {
+    margin-top: 2rem;
+    cursor: pointer;
+    text-align: right;
+}
+nav .menu_contact .menu_icon svg {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+}
+
+@-webkit-keyframes makeRedLine {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 120%;
+    }
+}
+
+@keyframes makeRedLine {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 120%;
+    }
+}
+.hidden {
+    display: none;
+}
+
+.scroll_btn {
+    z-index: 10;
+    width: 5rem;
+    height: 7rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    -webkit-animation: updownAni 1s ease-in-out infinite alternate;
+    animation: updownAni 1s ease-in-out infinite alternate;
+}
+.scroll_btn .st0 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+@-webkit-keyframes updownAni {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 2rem);
+    }
+}
+
+@keyframes updownAni {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 2rem);
+    }
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+    background: #0d1117;
+    overflow: hidden;
+}
+
+.main .cont {
+    position: relative;
+    height: 100%;
+}
+
+.main_title-01,
+.main_title-02 {
+    padding: 10rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 17rem;
+    line-height: 1;
+    transition: color 0.3s;
+    -webkit-text-stroke: 0.1rem #fff;
+}
+.main_title-01 p:nth-child(2),
+.main_title-02 p:nth-child(2) {
+    text-align: right;
+}
+
+.main_title-01 {
+    width: 100%;
+    mix-blend-mode: screen;
+    z-index: 3;
+}
+
+.main_title-02 {
+    width: 100%;
+    color: #141150;
+    z-index: 1;
+
+}
+
+
+.about__text-title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Cormorant", serif;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dddce3;
+    z-index: 5;
+}
+
+
+.menu_btn {
+    width: 2.5rem;
+    height: 3rem;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    z-index: 10;
+    cursor: pointer;
+}
+.menu_btn .st0 {
+    fill: none;
+    stroke: #192546;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+.photozone {
+    position: relative;          /* 상위 요소를 기준으로 위치 설정 */
+    width: 67vw;                 /* 화면 너비의 50%를 너비로 설정 */
+    height: 50vh;                /* 화면 높이의 50%를 높이로 설정 */
+    left: 50%;                   /* 상위 요소의 가운데(50%)를 기준으로 왼쪽 위치 설정 */
+    top: 50%;                    /* 상위 요소의 가운데(50%)를 기준으로 상단 위치 설정 */
+    transform: translate(-50%, -50%);  /* 현재 요소의 위치를 가로와 세로 각각 -50% 이동시켜 가운데 정렬 */
+    background: #fff;            /* 배경색을 흰색으로 설정 */
+    background-size: 100vw;      /* 배경 이미지의 크기를 화면 너비의 100%로 설정 */
+    transition: 0.5s;            /* 애니메이션 효과의 지속 시간을 0.5초로 설정 */
+    overflow: hidden;            /* 박스 안의 내용이 넘치면 숨김 처리 */
+    z-index: 2;                  /* 레이어 순서를 2로 설정 (높은 숫자일수록 상위 레이어) */
+}
+
+.photozone video {
+    position: absolute;          /* 상위 요소를 기준으로 위치 설정 */
+    top: 50%;                    /* 상위 요소의 가운데(50%)를 기준으로 상단 위치 설정 */
+    left: 50%;                   /* 상위 요소의 가운데(50%)를 기준으로 왼쪽 위치 설정 */
+    transform: translate(-50%, -50%);  /* 현재 요소의 위치를 가로와 세로 각각 -50% 이동시켜 가운데 정렬 */
+    height: 100%;                /* 동영상 높이를 상위 요소의 높이와 동일하게 설정 */
+    width: 100%;                 /* 동영상 너비를 상위 요소의 너비와 동일하게 설정 */
+    -o-object-fit: cover;        /* 동영상의 크기를 상위 요소에 맞게 조절 (Opera 브라우저 전용) */
+    object-fit: cover;           /* 동영상의 크기를 상위 요소에 맞게 조절 (다른 브라우저 전용) */
+}
+
+
+/*.photozone {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    width: 100%;*/
+/*    max-width: 100%;*/
+/*    height: 100%;*/
+/*    max-height: 100%;*/
+/*}*/
+
+/*.photozone video {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    min-width: 100%;*/
+/*    min-height: 100%;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    transform: translate(-50%, -50%) scale(1.5); !* 동영상 초기 크기 설정 *!*/
+/*    transition: transform 10s; !* 동영상 크기 변화 시간 설정 *!*/
+/*}*/
+.on {
+    opacity: 0.8;
+    transition: all 1s;
+}
+.on::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+}
+
+.inner {
+    max-width: 100rem;
+    margin: auto;
+}
+
+#history {
+    background-color: #f9f9f9;
+}
+#history .inner {
+    padding: 10rem 0;
+}
+#history .history_content {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: space-between;
+}
+#history .history_content-top, #history .history_content-bottom {
+    font-family: "LeferiPoint-WhiteObliqueA";
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding : 0rem 0rem 0rem 0rem;
+    margin-right: 10rem;
+}
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right : 10rem;
+}
+
+/*#history .history_content .point_text {*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: bolder;*/
+/*    margin-right: 2rem;*/
+/*    margin-top: 3rem;*/
+/*    color: black;*/
+/*    background: linear-gradient(to top, rgba(82, 229, 8, 0.87) 40%, transparent 0%);*/
+/*}*/
+
+@keyframes pointTextAnimation {
+    0% {
+        background-image: linear-gradient(to left, #4a4a4a 50%, #0077cc 50%);
+        background-position: 0% 50%;
+        text-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+    }
+    100% {
+        background-image: linear-gradient(to left, #4a4a4a 50%, #0077cc 50%);
+        background-position: 100% 50%;
+        text-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+    }
+}
+
+#history .history_content .point_text {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background: linear-gradient(to left, #4a4a4a 50%, #0077cc 50%);
+    background-size: 200% 100%;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*animation: pointTextAnimation 10s linear infinite;*/
+}
+
+
+/*.history_text-container h1 {*/
+/*    font-family: "Playfair Display";*/
+/*    color: black;*/
+/*    font-size: 3.2rem;*/
+/*    font-weight: 900;*/
+/*    background: linear-gradient(to top, #ff0000 40%, transparent 40%);*/
+/*    display: inline-block;*/
+/*}*/
+
+.history_text-container {
+    background: linear-gradient(135deg, #0077cc, #4a4a4a);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    max-width: 40%;
+    margin: 0 auto;
+    z-index: 1;
+    animation: containerMove 3s ease-in-out infinite alternate;
+}
+
+.history_text-container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes containerMove {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+#portfolio {
+    background-color: #f9f9f9;
+}
+
+#portfolio .inner {
+    padding: 11rem 0;
+}
+#portfolio .inner .portfolio_text-container h1 {
+    background: linear-gradient(to top, #ff0000 40%, transparent 40%);
+    display: inline-block;
+    font-family: "Playfair Display";
+    color: #141150;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+#portfolio .portfolio-container {
+    margin-top: 3.6rem;
+
+}
+
+#portfolio .portfolio-container .portfolio-menu {
+    display: flex;
+}
+#portfolio .portfolio-container .portfolio-menu li {
+    font-family: "Playfair Display";
+    margin-right: 3rem;
+    color: #919191;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition : transform 0.3s ease;
+    display : inline-block;
+}
+#portfolio .portfolio-container .portfolio-menu li:hover {
+    transform: scale(1.1);
+}
+#portfolio .portfolio-container .portfolio-menu .selected {
+    color: #484848;
+    font-weight: 800;
+}
+#portfolio .portfolio-container .menu-section-wrap {
+    position: relative;
+    height: auto;
+}
+#portfolio .menu-app,
+#portfolio .menu-web {
+    opacity: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 5rem;
+    max-width: 117rem;
+    width: 100%;
+}
+#portfolio .menu-app .card-wrapper,
+#portfolio .menu-web .card-wrapper {
+    display: inline-block;
+    /*position: absolute;*/
+    position : absolute;
+    overflow : hidden;
+    max-width: 39rem;
+    padding: 2rem;
+    height: auto;
+}
+.card-img {
+    width : 100%;
+    transition: transform 0.3s ease;
+}
+.card-wrapper:hover .card-img{
+    transform: scale(1.1);
+}
+#portfolio .menu-app .card-wrapper a,
+#portfolio .menu-web .card-wrapper a {
+    text-decoration: none;
+}
+#portfolio .menu-app .card-wrapper img,
+#portfolio .menu-web .card-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.4rem;
+}
+#portfolio .menu-app .card-wrapper .card-text,
+#portfolio .menu-web .card-wrapper .card-text {
+    margin-top: 1.7rem;
+}
+#portfolio .menu-app .card-wrapper .card-text p,
+#portfolio .menu-web .card-wrapper .card-text p {
+    font-size: 1.4rem;
+    color: #919191;
+}
+#portfolio .menu-app .card-wrapper .card-text h3,
+#portfolio .menu-web .card-wrapper .card-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #484848;
+    margin-top: 0.2rem;
+}
+#portfolio .active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#connect .inner {
+    padding: 11rem 0;
+}
+#connect .inner .connect_text-container h1 {
+    background: linear-gradient(to top, #ff0000 40%, transparent 40%);
+    display: inline-block;
+    font-family: "Playfair Display";
+    color: #141150;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+#connect .inner .connect_text-container .connect_title h1 {
+    color: #484848;
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+#connect .inner .connect_text-container .connect_title p {
+    color: #484848;
+    font-size: 2.4rem;
+    line-height: 4.6rem;
+    font-weight: 700;
+    margin-top: 2.3rem;
+}
+#connect .inner .connect_text-container .connect_contact {
+    margin-top: 5rem;
+}
+#connect .inner .connect_text-container .connect_address {
+    margin-top: 1.5rem;
+}
+#connect .inner .connect_text-container .connect_contact,
+#connect .inner .connect_text-container .connect_address {
+    color: #484848;
+    display: flex;
+}
+#connect .inner .connect_text-container .connect_contact h3,
+#connect .inner .connect_text-container .connect_address h3 {
+    font-family: "GmarketSansBold";
+    font-size: 1.6rem;
+    margin-right: 2rem;
+}
+#connect .inner .connect_text-container .connect_contact .connect_box span,
+#connect .inner .connect_text-container .connect_address .connect_box span {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+#connect .inner .connect_email-container {
+    margin-top: 4.4rem;
+}
+#connect .inner .connect_email-container .form-elements {
+    display: flex;
+    justify-content: space-between;
+}
+#connect .inner .connect_email-container .connect_form {
+    width: 47%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #484848;
+    display: flex;
+    flex-direction: column;
+}
+#connect .inner .connect_email-container .connect_form .form-elements__box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+#connect .inner .connect_email-container .connect_form .form-elements__box input {
+    background: none;
+    border: none;
+    margin-top: 2.4rem;
+    height: 3rem;
+    border-bottom: 0.1rem solid #484848;
+}
+#connect .inner .connect_email-container .connect_form .button-success {
+    width: 17rem;
+    height: 4.6rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 300;
+    background-color: #141150;
+    border: none;
+    border-radius: 0.7rem;
+    margin-top: 4rem;
+    align-self: flex-end;
+}
+#connect .inner .connect_email-container .connect_form .thankyou_message {
+    display: none;
+    background: linear-gradient(to top, rgba(255, 99, 99, 0.3098039216) 40%, transparent 0%);
+    text-align: center;
+    /* margin-top: 20px; */
+    color: black;
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+#connect .inner .connect_email-container .message__box {
+    display: flex;
+}
+#connect .inner .connect_email-container .message__box textarea {
+    width: 100%;
+    height: 16rem;
+    background: none;
+    margin-top: 2.4rem;
+}
+
+#footer {
+    border-top: 1px solid rgba(20, 17, 80, 0.4274509804);
+}
+#footer .footer_icon {
+    text-align: center;
+    padding: 3rem 0;
+}
+#footer .footer_icon svg {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+}
+#footer .footer_icon .youtubeIcon {
+    margin-right: 0rem;
+}
+
+@media screen and (max-width: 1700px) {
+    .inner {
+        width: calc(100% - 20rem);
+    }
+}
+@media screen and (max-width: 1200px) {
+    .inner {
+        width: calc(100% - 10.4rem);
+    }
+    #portfolio .inner .portfolio_text-container p {
+        font-size: 2.6rem;
+    }
+    #portfolio .inner .portfolio-container .menu-section-wrap .card-text p {
+        font-size: 1.6rem;
+    }
+    #portfolio .inner .portfolio-container .menu-section-wrap .card-text h3 {
+        font-size: 2rem;
+    }
+    #connect .inner .connect_text-container .connect_title h1 {
+        font-size: 3rem;
+    }
+    #connect .inner .connect_text-container .connect_title p {
+        margin-top: 1rem;
+    }
+    #connect .inner .connect_email-container {
+        margin-top: 6rem;
+    }
+    #connect .inner .connect_email-container .form-elements {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form .form-elements__box {
+        margin-top: 6rem;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form .button-success {
+        width: 21rem;
+        height: 5.7rem;
+        margin-top: 5.7rem;
+        align-self: flex-end;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form .button-success:hover {
+        background-color: #2c2676;
+    }
+}
+@media screen and (max-width: 576px) {
+    .inner {
+        width: calc(100% - 3rem);
+    }
+    #portfolio .inner {
+        padding: 5rem 0;
+    }
+    #portfolio .inner .portfolio-container .menu-section-wrap .card-text p {
+        font-size: 1.2rem;
+    }
+    #portfolio .inner .portfolio-container .menu-section-wrap .card-text h3 {
+        font-size: 1.5rem;
+    }
+    #history .history_content {
+        display: flex;
+        flex-direction: column;
+    }
+    #history .history_content-top, #history .history_content-bottom {
+        font-family: "LeferiPoint-WhiteObliqueA";
+        font-size: 1.8rem;
+        line-height: 4rem;
+
+    }
+
+    #history .history_content .point_text {
+        font-size: 2.3rem;
+        margin-right: 2rem;
+    }
+
+
+    #connect .inner {
+        padding: 5rem 0;
+    }
+    #connect .inner .connect_text-container .connect_title h1 {
+        font-size: 2rem;
+    }
+    #connect .inner .connect_text-container .connect_title p {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+        margin-top: 0.8rem;
+    }
+    #connect .inner .connect_text-container .connect_contact,
+    #connect .inner .connect_text-container .connect_address {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #connect .inner .connect_text-container .connect_contact h3,
+    #connect .inner .connect_text-container .connect_address h3 {
+        margin-top: 1rem;
+    }
+    #connect .inner .connect_email-container {
+        margin-top: 0;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form .form-elements__box {
+        margin-top: 3rem;
+    }
+    #connect .inner .connect_email-container .form-elements .connect_form .form-elements__box input {
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-width: 430px) {
+    .inner {
+        width: calc(100% - 2rem);
+    }
+    #portfolio .inner .portfolio_text-container p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    #portfolio .inner .portfolio-container .portfolio-menu {
+        display: flex;
+    }
+    #portfolio .inner .portfolio-container .portfolio-menu li {
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    #portfolio .inner .portfolio-container .menu-section-wrap .menu {
+        margin-top: 1.5rem;
+    }
+    #history .history_content-top, #history .history_content-bottom {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+    #history .history_content .point_text {
+        font-size: 1.8rem;
+    }
+    #connect .inner .connect_text-container .connect_contact p,
+    #connect .inner .connect_text-container .connect_address p {
+        display: flex;
+        flex-direction: column;
+    }
+    #connect .inner .connect_email-container .form-elements .button-success {
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 992px) {
+    .inner {
+        width: calc(100% - 10.4rem);
+    }
+}
+@media screen and (max-width: 576px) {
+    .inner {
+        width: calc(100% - 7rem);
+    }
+    .main_title-01,
+    .main_title-02 {
+        font-size: 8rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 430px) {
+    .inner {
+        width: calc(100% - 5rem);
+    }
+    .main_title-01,
+    .main_title-02 {
+        font-size: 8rem;
+        line-height: 10rem;
+        padding: 0;
+    }
+    .about__text-title {
+        font-size: 1.2rem;
+        top: 10%;
+        left: -2rem;
+    }
+    nav .menu_list a {
+        font-size: 8rem;
+        line-height: 10rem;
+        margin-bottom: 30%;
+    }
+    nav .menu_contact {
+        bottom: 2rem;
+        right: 2rem;
+    }
+    nav .menu_contact-profile {
+        font-size: 2.3rem;
+        line-height: 4.5rem;
+    }
+    nav .menu_contact span {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+}/*# sourceMappingURL=style.css.map */

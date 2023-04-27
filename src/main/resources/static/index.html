@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>KangMyoungSuk</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/gsapScroll.js"></script>
+    <script defer src="./js/form-submission-handler.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+          rel="stylesheet"/>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+</head>
+
+
+<body>
+<!--메뉴 버튼을 누르면 보이는 페이지-->
+<nav class="menu black-bg hidden">
+    <img class="cancel_btn" src="./img/cancel-btn.svg" alt=""/>
+    <ul class="menu_list">
+        <!--        <a href="#about">-->
+        <!--            <li>About</li>-->
+        <!--        </a>-->
+        <a href="#history">
+            <li>About Me</li>
+        </a>
+        <a href="#portfolio">
+            <li>Projects</li>
+        </a>
+        <a href="#connect">
+            <li>Contact</li>
+        </a>
+        <div class="redLine" style="display: none"></div>
+    </ul>
+    <div class="menu_contact">
+        <p class="menu_contact-profile">
+            Kang Myoungsuk</p>
+        <span>Tel. 010.8321.8675</span><br>
+        <span>Email. kang.myoung.suk.0212@gmail.com</span>
+        <div class="menu_icon">
+            <a href="https://github.com/myoungsuk">
+                <svg role="img" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg" fill="white">
+                    <title>GitHub</title>
+                    <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/myoung_suk.212/">
+                <svg role="img" viewBox="0 0 22 22"
+                     xmlns="http://www.w3.org/2000/svg" fill="white">
+                    <title>Instagram</title>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311a4.641 4.641 0 0 1 1.31 3.609c.058 1.265.069 1.645.069 4.849s-.012 3.584-.069 4.849a4.641 4.641 0 0 1-1.31 3.608c-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.069-4.849.069s-3.584-.012-4.849-.069c-1.366-.062-2.633-.336-3.608-1.311a4.641 4.641 0 0 1-1.31-3.609c-.058-1.265-.069-1.645-.069-4.849s.012-3.584.069-4.849a4.641 4.641 0 0 1 1.31-3.608c.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07zm0 1.982c-3.153 0-3.516.01-4.752.066-1.297.059-2.159.536-2.77 1.146-.609.609-1.087 1.472-1.146 2.77-.056 1.236-.066 1.599-.066 4.752s.01 3.516.066 4.752c.059 1.297.537 2.159 1.146 2.77.61.609 1.473 1.087 2.77 1.146 1.236.056 1.599.066 4.752.066s3.516-.01 4.752-.066c1.297-.059 2.159-.537 2.77-1.146.609-.61 1.087-1.473 1.146-2.77.056-1.236.066-1.599.066-4.752s-.01-3.516-.066-4.752c-.059-1.297-.537-2.159-1.146-2.77-.61-.609-1.473-1.087-2.77-1.146-1.236-.056-1.599-.066-4.752-.066zm0 12.51c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0-7
+c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!--멘 위 상단 동영상이 보이는 페이지-->
+<section id="about">
+    <div class="contents">
+        <div class="stn main">
+
+            <div class="cont">
+
+                <div class="main_title-01">
+                    <p>Kang</p>
+                    <p>Myoungsuk</p>
+                    <p>Portfolio</p>
+                    <span class="about__text-title">BACKEND - DEVELOPER</span>
+                </div>
+                <div class="menu_btn">
+                    <svg version="1.1" id="Layer_2"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                         y="0px" viewBox="0 0 90 90"
+                         style="enable-background: new 0 0 90 90"
+                         xml:space="preserve">
+        <line class="st0" x1="2" y1="67" x2="88" y2="67"
+              style="stroke: #FFFFFF;"/>
+                        <line class="st0" x1="2" y1="45" x2="88" y2="45"
+                              style="stroke: #FFFFFF;"/>
+                        <line class="st0" x1="2" y1="23" x2="88" y2="23"
+                              style="stroke: #FFFFFF;"/>
+    </svg>
+                </div>
+
+                <!-- <object class="menu_btn" data="./img/menu_btn.svg"></object> -->
+                <a href="#portfolio" class="scroll_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32"
+                         height="32" fill="white" class="bi bi-arrow-down"
+                         viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+
+                </a>
+                <div class="main_title-02">
+                    <p>Kang</p>
+                    <p>Myoungsuk</p>
+                    <p>Portfolio</p>
+                </div>
+                <div class="photozone">
+                    <video src="./img/demo2_AdobeExpress.mp4" loop autoplay
+                           muted
+                           playsinline></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--나의 이력사항 보여주는 페이지-->
+<section id="history">
+    <div class="inner">
+        <div class="history_text-container">
+            <h1>About Me</h1>
+        </div>
+        <div class="history_content">
+            <div class="profile-container">
+                <img class="profile-image" src="./img/profile.jpg"
+                     alt="강명석 프로필 사진">
+                <p class="history_content-top">
+                    <span class="point_text">이름</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 강명석  <br>
+                    <span class="point_text">생년월일</span> 1997.02.12<br>
+                    <span class="point_text">자격증</span>
+                    <br>
+                    네트워크관리사2급<br>
+                    2종보통운전면허<br>
+                    TOEIC 855<br>
+                    <br>
+
+                </p>
+            </div>
+            <p class="history_content-bottom">
+                <span class="point_text">히스토리</span> <br>
+                2013.03 ~ 2016.02 중앙고등학교 졸업<br>
+                2016.03 ~ 2017.02 한남대학교 화공신소재공학과 중퇴<br>
+                2017.02 ~ 2018.11 육군 병장 만기전역<br>
+                2019.03 ~ 2021.02 컴퓨터공학 학점은행제 및 편입 준비<br>
+                2021.03 ~ 2023.8 충북대학교 소프트웨어학과 졸업<br><br>
+
+                <span class="point_text">활동 및 경력</span> <br>
+                1. 데이터 시각화 웹사이트 (2021.03 ~ 2021.6)<br>
+
+                - 웹사이트를 제작하고 크롤링을 이용해서 데이터를 보여주는 프로젝트를 진행했습니다<br>
+                - 웹사이트의 전반적인 디자인을 담당했습니다.<br>
+                - 프로그래밍 관련 첫 프로젝트였지만 팀장을 맡았고 4명의 팀원이 있었습니다. 프로젝트 구현의 모든 부분을 파악하고
+                미리 조사해서 팀원들에게 각자 흥미가 있거나 잘할 수 있는 부분별로 업무를 할당하고, 그 결과로 A+라는 성적을 받을 수 있었습니다.<br>
+                <br>
+                2. 모바일 사원증 (2021.9 ~ 2022.11) 캡스톤디자인대회 <br>
+                - 안드로이드 스튜디오, firebase, 인텔리제이를 이용한 서버를 이용해서 블루투스 모바일 사원증을
+                제작했습니다.<br>
+                - 앱 구현을 담당했고 안드로이드 스튜디오로 코틀린을 이용해 구현했습니다.<br>
+                - 모바일 사원증을 만드는 과정에서 가장 많은 시간과 노력을 투자해야 했지만, 코틀린과 자바를 공부하는 의지로 방학 기간에도 쉬지 않고 공부하며 구현을 진행했고, 36팀 중 5등을 차지하여 우수상을 받았습니다.<br>
+                <br>
+                3. dialogflow를 이용한 챗봇 앱 (2022.6~ 2022.12)<br>
+                - 안드로이드 스튜디오, firebase, dialogflow 를 이용해서 챗봇을 구현했습니다.<br>
+                - 앱 제작을 담당했고 가장 연장자로서 졸업작품을 진행하고 있는 만큼 그 경험을 바탕으로 부분적으로 어떤 파트를 맡아야 될지
+                각 팀원에게 알려줬고 파트를 진행하면서 어려운 점은 없는지 어떤 걸 공부해야 되는지 알려주면서 챗봇 앱을 완성했습니다.<br><br>
+
+                4. Emesys동아리 웹사이트 제작 (2023.03 ~ )<br>
+                - 언어는 Java이며, 프레임워크로는 Spring Boot를 사용하여 백엔드 개발을 담당하고 있습니다.<br>
+                - 프론트엔드 부분은 React를 활용할 예정입니다.
+
+
+            </p>
+        </div>
+    </div>
+</section>
+<hr>
+<!--포트폴리오 페이지-->
+<section id="portfolio">
+    <div class="inner">
+        <div class="portfolio_text-container">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="portfolio-container">
+            <ul class="portfolio-menu">
+                <li class="selected" data-index="0">
+                    APP
+                </li>
+                <li data-index="1">WEB</li>
+            </ul>
+            <div class="menu-section-wrap">
+                <div class="menu-app menu active" data-index="0">
+                    <div class="card-wrapper">
+                        <a href="" target="_blank">
+                            <img src="./img/모바일사원증.png" class="card-img" alt=""/>
+                            <div class="card-text">
+                                <p>Mobile Employee ID</p>
+                                <h3>모바일 사원증</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-wrapper">
+                        <a href="#" target="_blank">
+                            <img src="./img/충봇.png" class="card-img"
+                                 alt="배포전"/>
+                            <div class="card-text">
+                                <p>Chungbot</p>
+                                <h3>Dialogflow를 이용한 충봇</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-wrapper">
+                        <a href=""
+                           target="_blank">
+                            <img src="./img/website.png" class="card-img"
+                                 alt="배포전"/>
+                            <div class="card-text">
+                                <p>Data Visualization Website</p>
+                                <h3>데이터 시각화 웹사이트</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="menu-web menu" data-index="1">
+                    <div class="card-wrapper">
+                        <a href="https://www.youtube.com/watch?v=wtp6JCJy_dU&list=PLs_am9JVFDQQL3l_ZxQGJjioyq-n6NGpa"
+                           target="_blank">
+                            <img src="./img/apat.png" class="card-img" alt=""/>
+                            <div class="card-text">
+                                <p>Emesys hompage</p>
+                                <h3>엠시스 홈페이지</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<hr>
+<!--페이지의 연락 부분-->
+<section id="connect">
+    <div class="inner">
+        <div class="connect_text-container">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="connect_email-container">
+            <form class="form-elements gform" method="POST" action="YOUR_FORM_ACTION_URL_HERE">
+                <div class="connect_form">
+                    <fieldset class="form-elements__box">
+                        <label for="email">이메일을 입력해주세요</label>
+                        <input id="email" name="email" placeholder=" " required/>
+                        <span class="input-underline"></span>
+                    </fieldset>
+                    <fieldset class="form-elements__box">
+                        <label for="telnum">전화번호를 입력해주세요</label>
+                        <input id="telnum" name="telnum" placeholder=" " required/>
+                        <span class="input-underline"></span>
+                    </fieldset>
+                </div>
+                <div class="connect_form">
+                    <fieldset class="form-elements__box message__box">
+                        <label for="message">문의내용을 입력해주세요</label>
+                        <textarea id="message" name="message" rows="10" placeholder="회사명:&#13;&#10;목적: 외주, 헤드헌팅, 질문 등" required></textarea>
+                        <span class="input-underline"></span>
+                    </fieldset>
+                    <fieldset class="pure-group honeypot-field" style="display: none">
+                        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                        <input id="honeypot" type="text" name="honeypot" value=""/>
+                    </fieldset>
+                    <button class="button-success" id="sendBtn">Contact Me</button>
+                    <div class="thankyou_message" id="thankyou_message">
+                        <p>"연락해주셔서 감사합니다."</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--페이지의 footer 부분-->
+<section id="footer">
+    <div class="footer_icon">
+        <a href="https://github.com/myoungsuk">
+            <svg role="img" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg" fill="#141150">
+                <title>GitHub</title>
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/myoung_suk.212/">
+            <svg role="img" viewBox="0 0 16 16"
+
+                 xmlns="http://www.w3.org/2000/svg" fill="#141150"
+                 class="bi bi-instagram">
+                <title>Instagram</title>
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+        </a>
+    </div>
+</section>
+</body>
+</html>
