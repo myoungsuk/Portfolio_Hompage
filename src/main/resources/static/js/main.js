@@ -75,14 +75,6 @@ window.onload = () => {
             cards.forEach((card, i) => {
                 cards[i].style.maxWidth = `${imgW}px`;
             });
-            // } else if (innerWidth <= "1700") {
-            //   imgStack = [0, 0, 0];
-            //   colWidth = innerContainerWidth / 3;
-            //   imgW = innerContainerWidth / 3;
-            //   let cards = document.querySelectorAll(".card-wrapper");
-            //   cards.forEach((card, i) => {
-            //     cards[i].style.maxWidth = `${imgW}px`;
-            //   });
         } else {
             imgStack = [0, 0, 0];
             colWidth = innerContainerWidth / 3;

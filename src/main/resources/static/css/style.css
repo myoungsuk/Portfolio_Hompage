@@ -279,27 +279,6 @@ nav .menu_contact .menu_icon svg {
     object-fit: cover;           /* 동영상의 크기를 상위 요소에 맞게 조절 (다른 브라우저 전용) */
 }
 
-
-/*.photozone {*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    width: 100%;*/
-/*    max-width: 100%;*/
-/*    height: 100%;*/
-/*    max-height: 100%;*/
-/*}*/
-
-/*.photozone video {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    min-width: 100%;*/
-/*    min-height: 100%;*/
-/*    width: auto;*/
-/*    height: auto;*/
-/*    transform: translate(-50%, -50%) scale(1.5); !* 동영상 초기 크기 설정 *!*/
-/*    transition: transform 10s; !* 동영상 크기 변화 시간 설정 *!*/
-/*}*/
 .on {
     opacity: 0.8;
     transition: all 1s;
@@ -354,14 +333,6 @@ nav .menu_contact .menu_icon svg {
     margin-right : 10rem;
 }
 
-/*#history .history_content .point_text {*/
-/*    font-size: 2.5rem;*/
-/*    font-weight: bolder;*/
-/*    margin-right: 2rem;*/
-/*    margin-top: 3rem;*/
-/*    color: black;*/
-/*    background: linear-gradient(to top, rgba(82, 229, 8, 0.87) 40%, transparent 0%);*/
-/*}*/
 
 @keyframes pointTextAnimation {
     0% {
@@ -393,14 +364,6 @@ nav .menu_contact .menu_icon svg {
 }
 
 
-/*.history_text-container h1 {*/
-/*    font-family: "Playfair Display";*/
-/*    color: black;*/
-/*    font-size: 3.2rem;*/
-/*    font-weight: 900;*/
-/*    background: linear-gradient(to top, #ff0000 40%, transparent 40%);*/
-/*    display: inline-block;*/
-/*}*/
 
 .history_text-container {
     background: linear-gradient(135deg, #0077cc, #4a4a4a);
@@ -852,4 +815,4 @@ nav .menu_contact .menu_icon svg {
         font-size: 1.6rem;
         line-height: 2.3rem;
     }
-}/*# sourceMappingURL=style.css.map */
+}
